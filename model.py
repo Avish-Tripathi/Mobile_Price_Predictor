@@ -15,7 +15,5 @@ from sklearn.svm import SVC
 classifier = SVC(kernel='linear', random_state=0)
 classifier.fit(X_train,y_train)
 
-y_pred = classifier.predict(X_test)
-
 pickle.dump(classifier, open('model.pkl','wb'))
 model = pickle.load(open('model.pkl','rb'))
