@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Mobile Price</title>
+{% endblock %}
+
+{% block body %}
+<marquee bgcolor = "Blue" direction = "left" style="color: red; font-size: 25px;">Welcome ! Know the price of your favourite mobile</marquee>
+<div class="head">
+    <h1 style="font-size: 40px; font-family: Sans-serif; color: #93690D;">Want to guess the price range of mobile with <br>your features ?</h1>
+    <h2 style="font-size: 30px; font-family: Sans-serif; color: brown;">You are at right place..<br>Enter the features you like and see the price range..</h2>
+</div>
+<div class="form" style="display: inline-block;">
+	<form action = "/predict" method = "POST">
+		<div class="row">
+			<input type="number" name="battery" placeholder="Battery Power (mAh)" style="border-radius: 10px; line-height: 5px; padding-left: 10px; font-size: 25px; display: flex; float: left; margin-right: 40px; width: 400px;" required>
+			<input type="number" name="RAM" placeholder="Random Access Memory (RAM)" style="border-radius: 10px; line-height: 5px; padding-left: 10px; font-size: 25px; display: flex; width: 400px;" required>
+		</div>
+		<br><br>
+		<div class="row">
+			<input type="number" name="int_memory" placeholder="Internal Memory (GB)" style="border-radius: 10px; line-height: 5px; padding-left: 10px; font-size: 25px; display: flex; float: left; margin-right: 40px; width: 400px;" required>
+			<input type="number" name="talk_time" placeholder="Longest time last by battery" style="border-radius: 10px; line-height: 5px; padding-left: 10px; font-size: 25px; display: flex; width: 400px;" required>
+		</div>
+		<br><br>
+		<div class="row">
+			<input type="number" name="fc" placeholder="Front Camera Mega Pixels" style="border-radius: 10px; line-height: 5px; padding-left: 10px; font-size: 25px; display: flex; float: left; margin-right: 40px; width: 400px;" required>
+			<input type="number" name="pc" placeholder="Primary Camera Mega Pixels" style="border-radius: 10px; line-height: 5px; padding-left: 10px; font-size: 25px; display: flex; width: 400px;" required>
+		</div>
+		<br><br>
+		<div class="row">
+			<input type="number" name="sc_h" placeholder="Screen Height (cm)" style="border-radius: 10px; line-height: 5px; padding-left: 10px; font-size: 25px; display: flex; float: left; margin-right: 40px; width: 400px;" required>
+			<input type="number" name="sc_w" placeholder="Screen Width (cm)" style="border-radius: 10px; line-height: 5px; padding-left: 10px; font-size: 25px; display: flex; width: 400px;" required>
+		</div><br><br>
+		<input type="submit" value="Know about Price" style="font-size: 30px; width: 300px; border-radius: 12px; color: #041946; background-color: #09BDBA;">
+	</form><br>
+	<h2 style="color: {{ col }}; font-size: 30px;">{{ predicted_text }}</h2>
+</div>
+{% endblock %}

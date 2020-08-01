@@ -1,0 +1,22 @@
+.head{
+    text-align: center;
+    font-size: 50px;
+    color: brown;
+}
+@media screen and (max-width: 456px){
+                .head{
+                    font-size: 12px;
+                    padding-left: 2px;
+                }
+                form .row input[number]{
+                    font-size: 12px;
+                    width: 50px;
+                    margin: 0 auto;
+                }
+                input[submit]{
+                    font-size: 12px;
+                    width: 10px;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+            }
