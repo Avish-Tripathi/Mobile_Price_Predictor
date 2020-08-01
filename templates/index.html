@@ -13,12 +13,12 @@
 <div class="form" style="display: inline-block;">
 	<form action = "/predict" method = "POST">
 		<div class="row">
-			<input type="number" name="battery" placeholder="Battery Power (mAh)" style="border-radius: 10px; line-height: 5px; padding-left: 10px; font-size: 25px; display: flex; float: left; margin-right: 40px; width: 400px;" required>
-			<input type="number" name="RAM" placeholder="Random Access Memory (RAM)" style="border-radius: 10px; line-height: 5px; padding-left: 10px; font-size: 25px; display: flex; width: 400px;" required>
+			<input type="number" name="battery" id="b" placeholder="Battery Power (mAh)" style="border-radius: 10px; line-height: 5px; padding-left: 10px; font-size: 25px; display: flex; float: left; margin-right: 40px; width: 400px;" required>
+			<input type="number" name="RAM" id="r" placeholder="Random Access Memory (RAM)" style="border-radius: 10px; line-height: 5px; padding-left: 10px; font-size: 25px; display: flex; width: 400px;" required>
 		</div>
 		<br><br>
 		<div class="row">
-			<input type="number" name="int_memory" placeholder="Internal Memory (GB)" style="border-radius: 10px; line-height: 5px; padding-left: 10px; font-size: 25px; display: flex; float: left; margin-right: 40px; width: 400px;" required>
+			<input type="number" name="int_memory" id="int_space" placeholder="Internal Memory (GB)" style="border-radius: 10px; line-height: 5px; padding-left: 10px; font-size: 25px; display: flex; float: left; margin-right: 40px; width: 400px;" required>
 			<input type="number" name="talk_time" placeholder="Longest time last by battery" style="border-radius: 10px; line-height: 5px; padding-left: 10px; font-size: 25px; display: flex; width: 400px;" required>
 		</div>
 		<br><br>
@@ -35,6 +35,6 @@
 	</form><br>
 	<h2 style="color: {{ col }}; font-size: 30px;">{{ predicted_text }}</h2>
 	<small>* The range is according to the present trend</small><br><br>
-	<a href = "{{ link }}", style="color: {{ col }}; font-size = 20px;">You can visit here for Buying</a>
+	<a href = "{{ link }}", style="color: {{ col }}; font-size = 20px;" onclick="check();">You can visit here for Buying</a>
 </div>
 {% endblock %}
