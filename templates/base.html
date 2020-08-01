@@ -5,25 +5,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
         {% block head %}{% endblock %}
-<!--        <style type="text/css">-->
-<!--            @media screen and (max-width: 456px){-->
-<!--                .head{-->
-<!--                    font-size: 12px;-->
-<!--                    padding-left: 2px;-->
-<!--                }-->
-<!--                form .row input[number]{-->
-<!--                    font-size: 12px;-->
-<!--                    width: 50px;-->
-<!--                    margin: 0 auto;-->
-<!--                }-->
-<!--                input[submit]{-->
-<!--                    font-size: 12px;-->
-<!--                    width: 10px;-->
-<!--                    margin: 0 auto; -->
-<!--                    text-align: center;-->
-<!--                }-->
-<!--            }-->
-<!--        </style>-->
+        <script type="text/javascript">
+		function check(){
+			var b = document.getElementById("bp").value;
+			var r = document.getElementById("ram").value;
+            var i = document.getElementById("int_space").value;
+			if(b == "" || r == "" || i == ""){
+				alert("Please fill the features first !");
+			}
+		}
+	    </script>
+        <style type="text/css">
+            @media screen and (max-width: 456px){
+                .head{
+                    font-size: 12px;
+                    padding-left: 2px;
+                }
+                form .row input[number]{
+                    font-size: 12px;
+                    width: 50px;
+                    margin: 0 auto;
+                }
+                input[submit]{
+                    font-size: 12px;
+                    width: 10px;
+                    margin: 0 auto; 
+                    text-align: center;
+                }
+            }
+        </style>
     </head>
     <body style="background-image: url(https://image.freepik.com/free-photo/top-view-black-coffee-mobile-phone-headphones-blue-background-with-copy-space_1921-212.jpg);
         background-repeat: no-repeat;
