@@ -5,7 +5,6 @@
 {% endblock %}
 
 {% block body %}
-<marquee bgcolor = "Blue" direction = "left" style="color: red; font-size: 25px;">Welcome ! Know the price of your favourite mobile</marquee>
 <div class="head">
     <h1 style="font-size: 40px; font-family: Sans-serif; color: #93690D;">Want to guess the price range of mobile with <br>your features ?</h1>
     <h2 style="font-size: 30px; font-family: Sans-serif; color: brown;">You are at right place..<br>Enter the features you like and see the price range..</h2>
@@ -34,7 +33,7 @@
 		<input type="submit" value="Know about Price" style="font-size: 30px; width: 300px; border-radius: 12px; color: #041946; background-color: #09BDBA;">
 	</form><br>
 	<h2 style="color: {{ col }}; font-size: 30px;">{{ predicted_text }}</h2>
-	<small>* The range is according to the present trend</small><br><br>
+	<small style="color: white;">* The range is according to the present trend</small><br><br>
 	<a href = "{{ link }}", style="color: {{ col }}; font-size = 20px;">You can visit here for Buying</a>
 </div>
 {% endblock %}
