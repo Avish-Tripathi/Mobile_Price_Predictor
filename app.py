@@ -18,13 +18,13 @@ def predict():
 
         output = int(Predict[0])
         if(output == 0):
-            return (render_template('index.html', predicted_text='Cool ! The the price will be low !', col='pink', link='https://www.digit.in/top-products/top-10-android-smartphones-under-rs-15-000-18.html'))
+            return (render_template('index.html', predicted_text='The the price will be low !', col='pink', link='https://www.digit.in/top-products/top-10-android-smartphones-under-rs-15-000-18.html'))
         elif(output == 1):
             return (render_template('index.html', predicted_text='The price will be medium !', col='pink', link='https://pricebaba.com/mobile/pricelist/trending-mobile-phones-in-india'))
         elif (output == 2):
-            return (render_template('index.html', predicted_text='The price will be high !!', col='orange', link='https://www.91mobiles.com/top-10-mobiles-in-india'))
+            return (render_template('index.html', predicted_text='The price will be moderately high !', col='orange', link='https://www.91mobiles.com/top-10-mobiles-in-india'))
         elif (output == 3):
-            return (render_template('index.html', predicted_text='OMG ! The price will be very high ! You may select some other features..', col='red', link='https://www.gadgetsnow.com/slideshows/worlds-10-most-expensive-smartphones/15-most-expensive-smartphones-in-the-world/photolist/65072793.cms'))
+            return (render_template('index.html', predicted_text='The price will be high !', col='red', link='https://www.gadgetsnow.com/slideshows/worlds-10-most-expensive-smartphones/15-most-expensive-smartphones-in-the-world/photolist/65072793.cms'))
     else:
         return render_template('index.html')
 
