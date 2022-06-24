@@ -86,8 +86,8 @@
             <button type="submit" class="btn btn-secondary btn-lg" style="margin-left: 34%; width: 150px;">Submit</button>
             <!-- <input type="submit" value="Check" style="font-size: 30px; width: 300px; border-radius: 12px; color: #041946; background-color: #09BDBA;"> -->
         </form><br>
-        <h2 style="color: blue; font-size : 30px; margin-left: 30%;">{{ predicted_text }}</h2>
+        <h2 style="color: {{ col }}; font-size : 30px; margin-left: 30%;">{{ predicted_text }}</h2>
         <small style="color: rgb(1, 1, 1); margin-left: 30%;">* The range is according to the present trend</small><br><br>
-        <a href = "", style="color: blue; font-size: 20px; margin-left: 30%;">You can visit here for Buying</a>
+        <a href = "{{ link }}", style="color: {{ col }}; font-size: 20px; margin-left: 30%;">You can visit here for Buying</a>
     </div>
 {% endblock %}
