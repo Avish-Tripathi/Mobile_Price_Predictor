@@ -18,9 +18,9 @@ def predict():
 
         output = int(Predict[0])
         if(output == 0):
-            return (render_template('index.html', predicted_text='Low price!', col='pink', link='https://www.digit.in/top-products/top-10-android-smartphones-under-rs-15-000-18.html'))
+            return (render_template('index.html', predicted_text='Low price!', col='blue', link='https://www.digit.in/top-products/top-10-android-smartphones-under-rs-15-000-18.html'))
         elif(output == 1):
-            return (render_template('index.html', predicted_text='Medium price!', col='pink', link='https://pricebaba.com/mobile/pricelist/trending-mobile-phones-in-india'))
+            return (render_template('index.html', predicted_text='Medium price!', col='blue', link='https://pricebaba.com/mobile/pricelist/trending-mobile-phones-in-india'))
         elif (output == 2):
             return (render_template('index.html', predicted_text='Moderately higher price!', col='orange', link='https://www.91mobiles.com/top-10-mobiles-in-india'))
         elif (output == 3):
